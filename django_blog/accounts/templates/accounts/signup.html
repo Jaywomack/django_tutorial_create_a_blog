@@ -1,5 +1,12 @@
 {% extends 'base_layout.html'%}
 <!--  Block content -->
 {%block content%}
-<h1>signup</h1>
+<h1>Signup</h1>
+<form class="site-form" action="/accounts/signup/" method="post">
+  <!-- Validation token -->
+  {%csrf_token%}
+  <!-- UserCreation form -->
+  {{form}}
+  <input type="submit" value="Signup" />
+</form>
 {%endblock%}
